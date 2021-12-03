@@ -19,12 +19,13 @@ body{
     top: 20px;
     left: 20px;
     bottom: 20px;
-    width: 300px;
+    width: 70px;
     border-radius: 10px;
     box-sizing: initial;
     border-left: 5px solid #4d5bf9;
     background: #4d5bf9;
-    transition: 0.5s;
+    transition: width 0.5s;
+    overflow: hidden;
 
 }
 
@@ -89,4 +90,44 @@ body{
     line-height: 60px;
     white-space: normal;
 
+}
+
+.toggle{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #4d5bf9;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.toggle.active{
+    background: #ff4d89;
+
+}
+
+.toggle ion-icon{
+    position: absolute;
+    color: #fff;
+    font-size: 34px;
+    display: none;
+
+}
+
+.toggle ion-icon.open,
+.toggle.active ion-icon.close{
+    display: block;
+    
+}
+
+.toggle ion-icon.close,
+.toggle.active ion-icon.open{
+    display: none;
+       
 }
