@@ -71,13 +71,14 @@ body{
 }
 
 .navigation ul li.active a .icon{
-    transform: translateY(-35px);
+    transform: translateY(-32px);
 
 }
 
 .navigation ul li a .text{
     position: absolute;
     color: var(--clr);
+    font-weight: 400;
     font-size: 0.75em;
     letter-spacing: 0.05em;
     transition: 0.5s;
@@ -94,9 +95,38 @@ body{
 
 .indicator{
     position: absolute;
-    top: -50px;
+    top: -50%;
     width: 70px;
     height: 70px;
     background: #29fd53;
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: 0.5s;
+
+}
+
+.indicator::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -10px 0 0 var(--clr);
+
+}
+
+.indicator::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: 0px -10px 0 0 var(--clr);
 
 }
