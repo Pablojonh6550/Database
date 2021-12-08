@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import Tasks from './components/tasks';
 
 const App = () => {
   // let message = 'Hello World';
@@ -18,7 +19,9 @@ const App = () => {
 
   return (
     <>
-      <div className='container'></div>
+      <div className='container'>
+        <Tasks tasks={tasks} />
+      </div>
       
     </>
   );
