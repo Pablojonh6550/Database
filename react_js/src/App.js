@@ -1,9 +1,12 @@
 import React from 'react';
+import './App.css';
 
 const App = () => {
-  const message = "Hello world!";
+  
+  return <div className='container'>
 
-  return <h1>{message}</h1>
+  </div>;
+
 }
 
 export default App;
