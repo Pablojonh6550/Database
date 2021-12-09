@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Tasks from './components/tasks';
+import AddTask from './components/AddTask';
 
 const App = () => {
   // let message = 'Hello World';
@@ -20,6 +21,7 @@ const App = () => {
   return (
     <>
       <div className='container'>
+        <AddTask />
         <Tasks tasks={tasks} />
       </div>
       

@@ -1,7 +1,10 @@
 import React from 'react';
 
 const AddTask = () => {
-    return ;
+    return (
+        <input type="text" />
+        
+    );
 }
  
 export default AddTask;
