@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Tasks from './components/tasks';
 import AddTask from './components/AddTask';
+import Button from './components/Button';
 
 const App = () => {
   // let message = 'Hello World';
