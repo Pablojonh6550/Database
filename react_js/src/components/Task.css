@@ -9,3 +9,7 @@
     align-items: center;
     
 }
+
+.task-title {
+    cursor: pointer;
+}

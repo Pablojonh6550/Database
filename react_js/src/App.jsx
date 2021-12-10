@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {v4 as uuidv4} from 'uuid';
 
 import './App.css';
-import Tasks from './components/tasks';
+import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
 import Button from './components/Button';
 
@@ -41,11 +41,12 @@ const App = () => {
 
   return (
     <>
+    <center>
       <div className='container'>
         <AddTask handleTaskAddition={handleTaskAddition} />
-        <Tasks tasks={tasks} />
+        <Tasks tasks={tasks} handleTaskClick={handleTaskClick} />
       </div>
-      
+      </center> 
     </>
   );
   
