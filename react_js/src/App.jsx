@@ -37,7 +37,7 @@ const App = () => {
 
   const handleTaskClick = (taskId) => {
     const newTasks = tasks.map((task) => {
-        if (task.id == taskId) return {... task, completed: !task.completed};
+        if (task.id === taskId) return {...task, completed: !task.completed};
         return task;
     
     });
@@ -45,7 +45,7 @@ const App = () => {
   };
 
   const handleTaskAddition = (taskTitle) => {
-    const newTasks = [... tasks, {
+    const newTasks = [...tasks, {
         title: taskTitle,
         id: uuidv4(),
         completed: false,
