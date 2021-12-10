@@ -1,4 +1,4 @@
-.add-task-button{
+.button{
     background-color: chartreuse;
     height: 40px;
     padding: 0 10px;
@@ -9,5 +9,11 @@
     font-weight: bold;
     cursor: pointer;
     border: none;
+    transition: all 0.5s ease;
 
+}
+
+.button:hover{
+    background-color: #444;
+    color: chartreuse;
 }
