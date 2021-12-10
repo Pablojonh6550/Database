@@ -7,7 +7,6 @@ import './App.css';
 
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
-import Button from './components/Button';
 import Header from './components/Header';
 import TaskDetails from './components/TaskDetails';
 
