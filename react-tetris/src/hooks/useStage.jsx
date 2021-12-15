@@ -20,9 +20,9 @@ export const useStage = (player, resetplayer) =>{
                         [
                             value,
                             `${player.collided ? 'merged': 'clear'}`,    
-                        ]
+                        ];
                     }
-                })
+                });
             });
 
           return newStage; 
@@ -30,7 +30,12 @@ export const useStage = (player, resetplayer) =>{
 
         setStage(prev => updateStage(prev));
 
-    }, [player]);
+    }, [
+        player.collided,
+        player.pos.x,
+        player.pos.y,
+        player.tetromino,
+    ]);
 
     return [stage, setStage];
 };
