@@ -15,7 +15,7 @@ export const StyledTetris = styled.div`
     display: flex;
     aling-items: flex-start; 
     padding: 40px;
-    margin: 0;
+    margin: 0 auto;
     max-width: 900px;
 
     aside{
