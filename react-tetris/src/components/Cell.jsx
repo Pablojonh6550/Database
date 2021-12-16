@@ -5,7 +5,9 @@ import { TETROMINOS } from '../tetrominos';
 const Cell = ({ type }) => {
 
     return(
-        <StyledCell type={type} color={TETROMINOS[type].color} />
+        <StyledCell type={type} color={TETROMINOS[type].color}>
+            {console.log('rerender cell')}
+        </StyledCell>
     );
 };
 

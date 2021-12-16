@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
-import { STAGE_WIDTH } from "../gameHelpers";
+
+import { STAGE_WIDTH, checkCollision } from "../gameHelpers";
 import { TETROMINOS, randomTetromino } from "../tetrominos";
 
 export const usePlayer = () => {
@@ -10,10 +11,37 @@ export const usePlayer = () => {
     
     });
 
+    function rotate(matrix, dir) {
+        const mtrx = matrix.map((_, index) => matrix.map(column => column[index]));
+
+        if (dir > 0) return mtrx.map(row => row.reverse());
+        return mtrx.reverse();
+
+    };
+
+    function playerRotate(stage, dir) {
+        const clonedPlayer = JSON.parse(JSON.stringify(player));
+        clonedPlayer.tetromino = rotate(clonedPlayer.tetromino, dir);
+    
+        const pos = clonedPlayer.pos.x;
+        let offset = 1;
+        while (checkCollision(clonedPlayer, stage, { x: 0, y: 0 })) {
+          clonedPlayer.pos.x += offset;
+          offset = -(offset + (offset > 0 ? 1 : -1));
+          if (offset > clonedPlayer.tetromino[0].length) {
+            rotate(clonedPlayer.tetromino, -dir);
+            clonedPlayer.pos.x = pos;
+            return;
+          }
+        }
+        setPlayer(clonedPlayer);
+
+      };
+
     const updatePlayerPos = ({ x, y, collided}) => {
         setPlayer(prev => ({
             ...prev,
-            pos:{ x:(prev.pos.x += x), y:(prev.pos.y += y)},
+            pos: { x:(prev.pos.x += x), y:(prev.pos.y += y) },
             collided,
         }));
 
@@ -28,5 +56,5 @@ export const usePlayer = () => {
 
     }, []);
 
-    return[player, updatePlayerPos, resetPlayer];
+    return[player, updatePlayerPos, resetPlayer, playerRotate];
 };
