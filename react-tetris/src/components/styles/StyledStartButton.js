@@ -6,7 +6,7 @@ export const StyledStartButton = styled.button`
     padding: 20px;
     min-height: 30px;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 15px;
     border: none;
     color: #FFF;
     background: #333;
