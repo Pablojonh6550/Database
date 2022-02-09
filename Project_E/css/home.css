@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: rgba(0, 0, 0, 0.2);
+    
+}
+
+nav {
+    
+    position: relative;
+    margin: 50px auto 0;
+    width: 590px;
+    height: 50px;
+    background: rgba(210, 204, 204, 1);
+    border-radius: 6px;
+    font-size: 0;
+    box-shadow: 0 2px 3px 2px rgba(0,0,0,0.3);
+
+}
+
+nav a {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+
+}
+
+nav .animation {
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    z-index: 0;
+    background: rgba(0,0,0,0.4);
+    border-radius: 6px;
+    transition: all 0.5s ease 0s;
+    
+}
+
+a:nth-child(1) {
+    width: 100px;
+
+}
+nav .start-home,a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+
+}
+
+a:nth-child(2) {
+    width: 130px;
+    
+}
+nav .start-photo,a:nth-child(2):hover~.animation {
+    width: 130px;
+    left: 100px;
+    
+}
+
+a:nth-child(3) {
+    width: 140px;
+    
+}
+nav .start-metas,a:nth-child(3):hover~.animation {
+    width: 140px;
+    left: 230px;
+    
+}
+
+a:nth-child(4) {
+    width: 120px;
+    
+}
+nav .start-vida,a:nth-child(4):hover~.animation {
+    width: 120px;
+    left: 370px;
+    
+}
+
+a:nth-child(5) {
+    width: 100px;
+    
+}
+nav .start-datas,a:nth-child(5):hover~.animation {
+    width: 100px;
+    left: 490px;
+    
+}
+
+.intro_photo {
+    position: relative;
+    margin: 30px 50px 0;
+    width: 720px;
+    height: 480px;
+    background: rgba(210, 204, 204, 1);
+    box-shadow: 0 2px 3px 2px rgba(0,0,0,0.3);
+    border-radius: 4px;
+    display: flex;
+    display: inline-block;
+
+}
+
+.intro_photo img {
+    position: relative;
+    border-radius: 4px;
+    display: flex;
+    
+}
+
+.text_home {
+    position: relative;
+    margin: 30px 800px 0;
+    width: 480px;
+    height: 240px;
+    background-color: #000;
+    display: inline-block;
+
+}
+
+.text_home p {
+    color: white;
+    word-break: inherit;
+
+}
